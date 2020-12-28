@@ -6,7 +6,7 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("CertInfo")]
-[assembly: AssemblyDescription("Certificate information")]
+[assembly: AssemblyDescription("Show certificate information\rIcon made by [Smashicons](https://www.flaticon.com/authors/smashicons) from [www.flaticon.com](https://www.flaticon.com/) is licensed by [Creative Commons BY 3.0](http://creativecommons.org/licenses/by/3.0/)")]
 #if DEBUG
 [assembly: AssemblyConfiguration("DEBUG")]
 #else
@@ -14,7 +14,7 @@ using System.Runtime.InteropServices;
 #endif
 [assembly: AssemblyCompany("Tomas \"Arci\" Kouba")]
 [assembly: AssemblyProduct("CertInfo")]
-[assembly: AssemblyCopyright("Copyright © Arci 2019")]
+[assembly: AssemblyCopyright("Copyright © Arci 2020")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
