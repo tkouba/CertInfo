@@ -41,6 +41,7 @@
             this.listView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listView.FullRowSelect = true;
             this.listView.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.None;
+            this.listView.HideSelection = false;
             this.listView.Location = new System.Drawing.Point(0, 0);
             this.listView.MultiSelect = false;
             this.listView.Name = "listView";
@@ -48,6 +49,8 @@
             this.listView.TabIndex = 0;
             this.listView.UseCompatibleStateImageBehavior = false;
             this.listView.View = System.Windows.Forms.View.Details;
+            this.listView.KeyDown += new System.Windows.Forms.KeyEventHandler(this.listView_KeyDown);
+            this.listView.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.listView_MouseDoubleClick);
             this.listView.Resize += new System.EventHandler(this.listView_Resize);
             // 
             // column1

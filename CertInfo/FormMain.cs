@@ -97,9 +97,29 @@ namespace CertInfo
             ResizeColumns();
         }
 
+        private void listView_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            CopyToClipboard();
+        }
+
         private void ResizeColumns()
         {
             column2.Width = listView.ClientSize.Width - column1.Width;
+        }
+
+        private void listView_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.C && e.Modifiers == Keys.Control)
+                CopyToClipboard();
+        }
+
+        void CopyToClipboard()
+        {
+            if (listView.FocusedItem != null &&
+                listView.FocusedItem.SubItems.Count > 1)
+            {
+                Clipboard.SetText(listView.FocusedItem.SubItems[1].Text);
+            }
         }
 
         void OpenFile()
