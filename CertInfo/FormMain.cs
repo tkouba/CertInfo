@@ -135,8 +135,10 @@ namespace CertInfo
             AddItem(grp, "Subject", x509.Subject);
             AddItem(grp, "Issuer", x509.Issuer);
             AddItem(grp, "Version", x509.Version.ToString());
-            AddItem(grp, "Valid Date", x509.NotBefore.ToShortDateString());
-            AddItem(grp, "Expiry Date", x509.NotAfter.ToShortDateString());
+            AddItem(grp, "Valid Date", x509.NotBefore.ToShortDateString())
+                .ChangeForeColor(x509.NotBefore > DateTime.Today, Color.Red);
+            AddItem(grp, "Expiry Date", x509.NotAfter.ToShortDateString())
+                .ChangeForeColor(x509.NotAfter < DateTime.Today, Color.Red);
             AddItem(grp, "Thumbprint", x509.Thumbprint);
             AddItem(grp, "Serial Number", x509.SerialNumber);
             AddItem(grp, "Raw Data Length", x509.RawData.Length.ToString());
