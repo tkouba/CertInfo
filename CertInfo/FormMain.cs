@@ -128,6 +128,10 @@ namespace CertInfo
         {
             using (var ofd = new OpenFileDialog()
             {
+                //DefaultExt = "pfx",
+                CheckFileExists = true,
+                CheckPathExists = true,
+                Filter = "PFX - PKCS#12|*.p12;*.pfx|P7B - PKCS#7|*.p7b;*.p7c|DER|*.der;*.crt;*.cer|PEM - x509|*.pem;*.crt;*.cer;*.key;*.txt|All files|*.*"                
             })
             {
                 if (ofd.ShowDialog(this) == DialogResult.OK)
