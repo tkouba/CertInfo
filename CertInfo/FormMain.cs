@@ -111,6 +111,8 @@ namespace CertInfo
         {
             if (e.KeyCode == Keys.C && e.Modifiers == Keys.Control)
                 CopyToClipboard();
+            if (e.KeyCode == Keys.Escape && e.Modifiers == Keys.None)
+                Close();
         }
 
         void CopyToClipboard()
